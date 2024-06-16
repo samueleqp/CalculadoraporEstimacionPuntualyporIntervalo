@@ -1,0 +1,105 @@
+/* Importación de fuente */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url('https://www.transparenttextures.com/patterns/math-squared.png');
+    background-color: #eef2f3;
+    margin: 0;
+    padding: 0;
+    
+    background-image: url(Imagen.jpg) ;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 2em;
+}
+
+.instructions {
+    background-color: #ffeb3b;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.calculator {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#resultado-intervalo, #resultado-puntual {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #155724;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    button {
+        width: 100%;
+        padding: 15px;
+    }
+}

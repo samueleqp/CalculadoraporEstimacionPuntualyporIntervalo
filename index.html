@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Estimación</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>¡Calculadora por Estimación Puntual y por Intervalo!</h1>
+        <div class="instructions">
+            <h2>¿Cómo funciona la Calculadora de Estimaciones?</h2>
+            <p>Funciona calculador las estimaciones estadísticas, utilizando datos ingresados por el usuario.<p>
+                <p>Tiene dos modos principales:<p>
+                    <p>1.Estimación por Intervalo:Calcula el intervalo de confianza para una media muestral, considerando el tamaño de la muestra, la desviación estándar y el nivel de confianza.<p>
+                        <p>2.Estimación Puntual:Calcula, las estimaciones puntuales como la media, mediana, moda, desviación estándar y varianza a partir de un conjunto de datos.<p>
+                            <p>Solo necesitas ingresar los datos requeridos y hacer clic en el botón calcular para obtener los resultados.</p>
+            <p>Los siguiente botones te permiten cambiar la vista de una calculadora a otra:</p>
+            <button id="intervalo-btn">Estimación por Intervalo</button>
+            <button id="puntual-btn">Estimación Puntual</button>
+        </div>
+
+        <div id="intervalo-calculator" class="calculator">
+            <h2>Calculadora de Estimación por Intervalos</h2>
+            <label for="media">Media Muestral</label>
+            <input type="number" id="media" placeholder="Media aritmética" required>
+            <label for="muestra">Tamaño de Muestra</label>
+            <input type="number" id="muestra" placeholder="Tamaño de muestra" required>
+            <label for="desviacion">Desviación Estándar</label>
+            <input type="number" id="desviacion" placeholder="Desviación estándar" required>
+            <label for="confianza">Nivel de Confianza (90, 95, 99)</label>
+            <input type="number" id="confianza" placeholder="Nivel de confianza" required>
+            <button onclick="calcularIntervalo()">Calcular</button>
+            <div id="resultado-intervalo"></div>
+        </div>
+
+        <div id="puntual-calculator" class="calculator" style="display:none;">
+            <h2>Calculadora de Estimación Puntual</h2>
+            <label for="tipo-estimacion">Selecciona una de las opciones para hacer la estimación puntual:</label>
+            <select id="tipo-estimacion">
+                <option value="media">Media</option>
+                <option value="mediana">Mediana</option>
+                <option value="moda">Moda</option>
+                <option value="desviacion">Desviación Estándar</option>
+                <option value="varianza">Varianza</option>
+            </select>
+            <label for="datos">Datos (separados por una coma ',')</label>
+            <input type="text" id="datos" placeholder="Ejemplo: 2, 31, 45, 67, 89, 01, 23, 24" required>
+            <button onclick="calcularPuntual()">Calcular</button>
+            <div id="resultado-puntual"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Realizado por: Samuel Quintero y Andly Pierre</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
